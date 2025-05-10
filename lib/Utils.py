@@ -3,6 +3,7 @@ from lib.ConfigLoader import get_spark_conf
 
 
 def get_spark_session(env):
+    # Local
     if env == "LOCAL":
         return SparkSession.builder \
             .config(conf=get_spark_conf(env)) \
